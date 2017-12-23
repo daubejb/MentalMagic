@@ -21,12 +21,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/youWillChooseText"
+        android:id="@+id/orientationYouWillChooseText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/you_will_choose_the"
+        android:text="@string/orientation_you_will_choose_the"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/orientationImageView"
         app:layout_constraintLeft_toLeftOf="parent"

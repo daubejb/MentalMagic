@@ -1,15 +1,48 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.daubedesign.mentalmagic.ShakeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/shake"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="100dp"
-        android:text="Shake" />
 
-</FrameLayout>
+    <android.support.constraint.Guideline
+        android:id="@+id/leftVerticalGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="86dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/rightVerticalGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="300dp" />
+
+    <TextView
+        android:id="@+id/shakeYouWillChooseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/shake_you_will_choose_the"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/shakeImageView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/shake_image_of_card_string_playing_card_suit"
+        android:src="@drawable/clubs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rightVerticalGuide"
+        app:layout_constraintStart_toStartOf="@+id/leftVerticalGuide"
+        app:layout_constraintTop_toBottomOf="@+id/shakeYouWillChooseText" />
+</android.support.constraint.ConstraintLayout>

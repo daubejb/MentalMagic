@@ -74,7 +74,7 @@
         android:id="@+id/waveYouWillChooseText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text="@string/wave_you_will_choose_the"
         android:textSize="24sp"
         app:layout_constraintLeft_toLeftOf="parent"

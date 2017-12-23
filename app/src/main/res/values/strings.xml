@@ -1,12 +1,14 @@
 <resources>
     <string name="app_name">MentalMagic</string>
     <string name="action_settings">Settings</string>
-    <string name="you_will_choose_the">You will choose the:</string>
+    <string name="orientation_you_will_choose_the">You will choose the.</string>
     <string name="playing_card_suit">Playing Card Suit</string>
     <string name="c">C</string>
     <string name="h">H</string>
     <string name="s">S</string>
     <string name="d">D</string>
-    <string name="wave_you_will_choose_the">You will choose the:</string>
+    <string name="wave_you_will_choose_the">You will choose the</string>
     <string name="wave_playing_card_suit_image">Playing card suit image</string>
+    <string name="shake_you_will_choose_the">You will choose the:</string>
+    <string name="shake_image_of_card_string_playing_card_suit">Image of card @string/playing_card_suit</string>
 </resources>

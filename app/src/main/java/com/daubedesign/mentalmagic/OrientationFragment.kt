@@ -47,11 +47,16 @@ class OrientationFragment : Fragment(), SensorEventListener {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        youWillChooseText.text = youWillChooseDetecting
+        orientationYouWillChooseText.text = youWillChooseDetecting
 
         orientationImageView.setOnClickListener { this.startListening()
             Log.w(TAG, "clicked")
             orientationImageView.visibility = View.INVISIBLE
+        }
+
+        orientationYouWillChooseText.setOnLongClickListener { this.stopListening()
+            orientationImageView.visibility = View.VISIBLE
+            true
         }
     }
 
@@ -97,7 +102,7 @@ class OrientationFragment : Fragment(), SensorEventListener {
                         if ( changeInFlip > 10 ) {
                             orientationImageView.setImageResource(R.drawable.clubs)
                             orientationImageView.visibility = View.VISIBLE
-                            youWillChooseText.text = youWillChooseDetected
+                            orientationYouWillChooseText.text = youWillChooseDetected
                             this.stopListening()
                             triggered = false
                         }
@@ -106,7 +111,7 @@ class OrientationFragment : Fragment(), SensorEventListener {
                         if ( changeInFlip < -10 ) {
                             orientationImageView.setImageResource(R.drawable.spades)
                             orientationImageView.visibility = View.VISIBLE
-                            youWillChooseText.text = youWillChooseDetected
+                            orientationYouWillChooseText.text = youWillChooseDetected
                             this.stopListening()
                             triggered = false
                         }
@@ -115,7 +120,7 @@ class OrientationFragment : Fragment(), SensorEventListener {
                         if ( (changeInRotation > -350) && (changeInRotation < -300) ) {
                             orientationImageView.setImageResource(R.drawable.hearts)
                             orientationImageView.visibility = View.VISIBLE
-                            youWillChooseText.text = youWillChooseDetected
+                            orientationYouWillChooseText.text = youWillChooseDetected
                             this.stopListening()
                             triggered = false
                         }
@@ -124,7 +129,7 @@ class OrientationFragment : Fragment(), SensorEventListener {
                         if ( (changeInRotation < 350) && (changeInRotation > 300) ) {
                             orientationImageView.setImageResource(R.drawable.diamonds)
                             orientationImageView.visibility = View.VISIBLE
-                            youWillChooseText.text = youWillChooseDetected
+                            orientationYouWillChooseText.text = youWillChooseDetected
                             this.stopListening()
                             triggered = false
                         }
